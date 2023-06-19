@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% block content %}
+    {% for i in f %}
+        <h1>This is homescreen {{i}}</h1>
+    {% endfor %}
+
+{% endblock content %}

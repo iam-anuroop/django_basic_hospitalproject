@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+doc
+{% endblock title %}
+{% load static %}
+{% block content %}
+    <h1>This is doc {{i}}</h1>
+    {% for d in doc  %}
+        <div class="card" style="width: 18rem;">
+            <img style="width: 8rem;,height:8rem" class="card-img-top" src="{{d.d_img.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{d.d_name}}</h5>
+              <p class="card-text">{{d.d_disp|stringformat:"s"}}</p>
+              <p class="btn btn-primary">{{d.d_spec}}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+dprtmnt
+{% endblock title %}
+{% block content %}
+    <h1>This is dprtmnt{{i}}</h1>
+    {% for i in d  %}
+       <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{i.disp}}</h6>
+          <p class="card-text">{{i.fees}}</p>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock content %}
